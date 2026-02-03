@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #90ee90;
+    padding: 0 20px;
+}
+
+header h2 {
+    color: #333;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.contacto {
+    display: none;
+}
+
+main {
+    background-color: #6b8e23;
+    padding: 20px;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+}
+
+.imagenes img {
+    width: 150px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #90ee90;
+    padding: 20px;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 557px) {
+    .icon {
+        display: none;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        font-weight: bold;
+    }
+
+    .imagenes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .video {
+        display: block;
+    }
+
+    .video video {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    footer p, footer > div:not(.video):not(audio) {
+        width: 45%;
+    }
+
+    .video {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .video video {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    footer audio {
+        width: 45%;
+        max-width: 400px;
+        margin-top: 0;
+    }
+}
+
